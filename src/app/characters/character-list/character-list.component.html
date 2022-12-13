@@ -1,0 +1,23 @@
+<div id="char-list">
+
+  <mat-card *ngFor="let char of allCharacters.slice(0, charactersToShow)">
+
+    <mat-card-title>{{char.name}}</mat-card-title>
+    <mat-card-content>
+      <h4>Movies:</h4>
+      <div *ngFor="let movie of char.films">
+        <mat-icon *ngIf="movie.includes('api')">pending</mat-icon>
+        <ng-container *ngIf="!movie.includes('api')">{{movie}}</ng-container>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-button (click)="navigateToSingleChar(char.name)">
+        Read more
+        <mat-icon>arrow_right_alt</mat-icon>
+      </button>
+    </mat-card-actions>
+
+  </mat-card>
+
+</div>

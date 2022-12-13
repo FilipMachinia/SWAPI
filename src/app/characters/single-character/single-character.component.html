@@ -1,0 +1,22 @@
+<button mat-button (click)="goBack()">
+  <mat-icon>arrow_left_alt</mat-icon>
+  Go back
+</button>
+
+<section>
+  <mat-card *ngIf="character" [id]="character.name">
+    <mat-card-title>{{character.name}}</mat-card-title>
+    <img [src]="imgUrl" alt="char image">
+    <p><strong>Birth: </strong>{{character.birth_year}}</p>
+    <p><strong>Height: </strong>{{character.height}}cm</p>
+    <p><strong>Mass: </strong>{{character.mass}}kg</p>
+
+    <mat-card-content>
+      <h4>Movies:</h4>
+      <div *ngFor="let movie of character.films">
+        {{movie}}
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <h2 *ngIf="!character"> No data for this character</h2>
+</section>

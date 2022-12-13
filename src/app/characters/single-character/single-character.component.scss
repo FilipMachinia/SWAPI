@@ -1,0 +1,28 @@
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+
+  mat-card {
+    padding-bottom: 5rem !important;
+
+    img {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 164px;
+      height: 164px;
+      opacity: .7;
+    }
+  }
+}
+
+button {
+  border-bottom: 4px solid white;
+
+  &:hover {
+    color: #2f8375;
+    border-bottom: 4px solid #2f8375;
+  }
+}

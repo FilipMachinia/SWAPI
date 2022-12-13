@@ -1,0 +1,19 @@
+span {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  font-weight: 500;
+
+  // invisible border, used so UI doesn't move on hover
+  border-bottom: 4px solid white;
+
+  mat-icon {
+    padding-right: .3rem;
+  }
+
+  &:hover {
+    color: #2f8375;
+    border-bottom: 4px solid #2f8375;
+  }
+
+}
